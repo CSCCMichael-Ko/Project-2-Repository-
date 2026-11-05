@@ -3,9 +3,9 @@ Name: Michael Ko
 Project Name: Weekly_Exercise_Tracker (test_tracker.py)
 Class: CSCI-1511-W03L (Python Programming)
 Professor: Travis Burke
-Date: 11/05/2026
-Purpose: pytest tests
-Starter Code: Chapter 11 of the Python Crash Course Textbook
+Date: 11/04/2026
+Purpose: pytest tests. Testing the ExerciseLog class. 
+Starter Code: Chapter 11 of the Python Crash Course Textbook. Used the textbook as well as outside sources (websites) to learn more abot topics covered in textbook. 
 """
 import pytest
 

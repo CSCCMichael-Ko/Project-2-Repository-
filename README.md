@@ -1,5 +1,5 @@
 # Video Link:
-[Insert Link Here]
+https://youtu.be/-U9ByNN0TFw
 # Michael Ko - Project 2 Repository
 This is my Project 2 Repository which involves making a project (creative, up to me) that goes over topics from Chapters 8-11 of the Python Crash Course (Third Edition) Textbook.
 ## Project Idea - Managing Exercises:
@@ -21,8 +21,15 @@ Included:
 - User Interaction 
 - Functions and/or Classes
 - Inheritance 
+- Functions & Modularization 
+- Data Persistence (Storing and retrieving structured data, such as using the json module)
+- Automated Testing
+
+What May Not Be Included:
+- Reading contents of a file (may not be necessary)
+- Utilizing try-except blocks
 
 Note: I recreated this repository. 
 
 ## Presentation Link: 
-[Insert Link Here]
+file:///Users/michaelko/Downloads/Project%202%20(Chapters%208-11)%20Presentation%20Slides.pdf

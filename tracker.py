@@ -5,6 +5,7 @@ Class: CSCI-1511-W03L (Python Programming)
 Professor: Travis Burke
 Date: 11/03/2026
 Purpose: Project 2 is a Python Program that logs exercises done as well as the amount of reps during a week.
+tracker.py stores/manages data.
 Starter Code: None
 """
 from pathlib import Path
@@ -37,12 +38,6 @@ class ExerciseLog:
             raise ValueError("Goals must be at least 1.")
         self.exercise_goal = exercise_goal
         self.reps_goal = reps_goal
-
-    def new_week(self):
-        """Clears totals and goals for another/new week"""
-        self.totals = {}
-        self.exercise_goal = 0
-        self.reps_goal = 0
 
 def save_name(name, path):
     """Save the user's name to a JSON file."""

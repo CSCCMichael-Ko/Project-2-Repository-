@@ -1,3 +1,13 @@
+"""
+Name: Michael Ko
+File Name: main.py
+Class: CSCI-1511-W03L (Python Programming)
+Professor: Travis Burke
+Date: 11/04/2026
+Purpose: main.py handles everything the user sees and imports the class from tracker.py
+Starter Code: Used the textbook as well as outside sources (websites) to learn more abot topics covered in textbook. 
+"""
+
 from tracker import ExerciseLog, load_name, save_name, name_file
 
 def ask_whole_number(prompt):
