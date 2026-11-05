@@ -37,10 +37,10 @@ def main():
     if name:
         print(f"Welcome back, {name}!")
     else:
-        name = input("What is your name? ").strip().title()
+        name = input("What is your name? ").strip()
         while name == "":
             print("Please enter your name.")
-            name = input("What is your name? ").strip().title()
+            name = input("What is your name? ").strip()
         save_name(name, name_file)
         print(f"We'll remember you when you come back, {name}!")
     
