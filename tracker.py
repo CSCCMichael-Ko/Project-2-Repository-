@@ -20,25 +20,3 @@ class ExerciseLog:
             return False
         self.totals[name] = self.totals.get(name, 0) + reps
         return True
-
-log = ExerciseLog()
-
-while True:
-    exercise = input("\nExercise name ('q' to quit): ").lower()
-    if exercise == "q":
-        break
-    if exercise == "":
-        print("Please enter an exercise name.")
-        continue
-
-    reps = input("Reps done: ")
-    while not reps.isdigit() or int(reps) == 0:
-        print("Please enter a whole number greater than 0.")
-        reps = input("Reps done: ")
-    reps = int(reps)
-
-    log.add_exercise(exercise, reps)
-
-print("\nThis week's totals:")
-for exercise in log.totals:
-    print(f"{exercise}: {log.totals[exercise]} reps")
