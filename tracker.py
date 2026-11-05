@@ -4,7 +4,7 @@ File Name: tracker.py
 Class: CSCI-1511-W03L (Python Programming)
 Professor: Travis Burke
 Date: 11/03/2026
-Purpose:
+Purpose: Project 2 is a Python Program that logs exercises done as well as the amount of reps during a week.
 Starter Code: None
 """
 from pathlib import Path
