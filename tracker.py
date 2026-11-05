@@ -8,7 +8,20 @@ Purpose:
 Starter Code: None
 """
 
-log = {}
+class ExerciseLog:
+    """Class stores the total reps done for each exercise (week)"""
+    def __init__(self):
+        """Starts with no exercises logged."""
+        self.totals = {}
+
+    def add_exercise(self, name, reps):
+        """Add reps to a total. True if added, False if reps is below 1."""
+        if reps < 1:
+            return False
+        self.totals[name] = self.totals.get(name, 0) + reps
+        return True
+
+log = ExerciseLog()
 
 while True:
     exercise = input("\nExercise name ('q' to quit): ").lower()
@@ -24,11 +37,8 @@ while True:
         reps = input("Reps done: ")
     reps = int(reps)
 
-    if exercise in log:
-        log[exercise] += reps
-    else:
-        log[exercise] = reps
+    log.add_exercise(exercise, reps)
 
 print("\nThis week's totals:")
-for exercise in log:
-    print(f"{exercise}: {log[exercise]} reps")
+for exercise in log.totals:
+    print(f"{exercise}: {log.totals[exercise]} reps")
