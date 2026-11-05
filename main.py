@@ -1,4 +1,4 @@
-from tracker import ExerciseLog
+from tracker import ExerciseLog, load_name, save_name, name_file
 
 def ask_whole_number(prompt):
     """Function that asks until the user types a whole number greater than 0."""
@@ -28,11 +28,22 @@ def show_totals(log):
         if log.totals[exercise] >= log.reps_goal:
             line += " (Reps (Repetition) goal met)"
         print(line)
-    print(f"\nExercises done: {len(log.totals)} of {log.exercise_goal}")
+    print(f"\nExercises done: {len(log.totals)} of {log.exercise_goal}.")
 
 
 def main():
-    """Log exercises until the user quits, then show the totals."""
+    """Greet the user, ask for goals, log exercises until the user quits, then show progress."""
+    name = load_name(name_file)
+    if name:
+        print(f"Welcome back, {name}!")
+    else:
+        name = input("What is your name? ").strip().title()
+        while name == "":
+            print("Please enter your name.")
+            name = input("What is your name? ").strip().title()
+        save_name(name, name_file)
+        print(f"We'll remember you when you come back, {name}!")
+    
     log = ExerciseLog()
     log.set_goals(
         ask_whole_number("Goal (Exercises This Week): "), ask_whole_number("Goal (Reps Per Exercise): ")
