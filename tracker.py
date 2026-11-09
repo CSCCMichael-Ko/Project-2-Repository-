@@ -39,16 +39,16 @@ class ExerciseLog:
         self.exercise_goal = exercise_goal
         self.reps_goal = reps_goal
 
-def save_name(name, path):
-    """Save the user's name to a JSON file."""
-    contents = json.dumps(name)
-    path.write_text(contents)
+class NameStore:
+    """Class the has to do with the user's name; saved in a JSON file."""
+    def __init__(self, path="username.json"):
+        """Load the saved name if there is one."""
+        self.path = Path(path)
+        self.name = None
+        if self.path.exists():
+            self.name = json.loads(self.path.read_text())
         
-def load_name(path):
-    """Return the saved name, or None if no name has been saved yet."""
-    if path.exists():
-        contents = path.read_text()
-        name = json.loads(contents)
-        return name
-    else:
-        return None
+    def set_name(self, name):
+        """Store the name and save it to the file."""
+        self.name = name
+        self.path.write_text(json.dumps(name))
