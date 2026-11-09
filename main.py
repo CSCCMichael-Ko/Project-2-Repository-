@@ -18,18 +18,6 @@ def ask_whole_number(prompt):
         text = input(prompt)
     return int(text)
 
-def set_goals(self, exercise_goal, reps_goal):
-    """
-    Set how many exercises to do this week and how many reps for each.
-    Updates a boolean to True if goals are valid (at least 1), otherwise False.
-    """
-    if exercise_goal >= 1 and reps_goal >= 1:
-        self.exercise_goal = exercise_goal
-        self.reps_goal = reps_goal
-        self.goals_are_set = True
-    else:
-        self.goals_are_set = False
-
 def show_totals(log):
     """Print each exercise's total reps for the week."""
     print("\nThis week's totals:")
