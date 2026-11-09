@@ -9,7 +9,7 @@ Starter Code: Chapter 11 of the Python Crash Course Textbook. Used the textbook 
 """
 import pytest
 
-from tracker import ExerciseLog, load_name, save_name
+from tracker import ExerciseLog, NameStore
 
 def test_add_exercise_starts_a_new_total():
     """The first time an exercise is logged, its total is the reps given."""
